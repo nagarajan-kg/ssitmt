@@ -1,0 +1,281 @@
+
+.footer-container {
+  width: 100%;
+  background: linear-gradient(135deg,#3E64AF 0%, #2F5196 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+
+.footer-inner {
+  max-width: 1200px;          
+  margin: 0 auto;
+  padding: 80px 35px;       
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;               
+}
+
+
+.footer-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 180px;               
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0.22), rgba(255,255,255,0));
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.footer-section h2 {
+  font-size: 22px;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.footer-section p {
+  line-height: 1.6;
+  font-size: 15px;
+  margin: 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin: 10px 0;
+  font-size: 15px;
+  cursor: default;
+  transition: transform .25s, color .2s;
+}
+
+.footer-section ul li:hover {
+  transform: translateX(6px);
+  color: #d9e6ff;
+}
+
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: white;
+  color: #2f5196;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform .18s, box-shadow .18s;
+  text-decoration: none;
+}
+
+.icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+}
+
+
+.footer-ribbon {
+  width: 100%;
+  border-top: 1px solid rgba(255,255,255,0.18);
+  padding: 14px 0;
+  text-align: center;
+  background: linear-gradient(90deg, rgba(0,0,0,0.03), rgba(255,255,255,0.01));
+  position: relative;
+  z-index: 2;
+  margin-top: 18px;
+}
+
+.footer-ribbon span {
+  font-size: 16px;
+  color: #e6eefc;
+}
+
+.footer-ribbon .ribbon-link {
+  color: #ff8a3d;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 6px;
+}
+
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 6px auto 40px;
+  padding: 0 65px;   
+  color: rgba(255,255,255,0.85);
+  text-align: center;
+  font-size: 14px;
+}
+
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 9999;
+  text-decoration: none;
+  font-size: 20px;
+  transition: transform .15s, box-shadow .15s;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.28);
+}
+
+/* Responsive rules */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-inner {
+    padding: 60px 32px;
+  }
+
+  .footer-bottom {
+    padding: 0 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-inner {
+    padding: 40px 20px; 
+  }
+
+  .footer-ribbon {
+    padding: 12px 0;
+  }
+
+  .footer-container::before {
+    width: 120px;
+  }
+}
+
+
+/* MOBILE RESPONSIVE FOR FOOTER */
+@media (max-width: 1024px) {
+.footer-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.footer-inner {
+padding: 60px 32px;
+}
+
+.footer-bottom {
+padding: 0 32px;
+}
+}
+
+@media (max-width: 768px) {
+.footer-grid {
+grid-template-columns: 1fr;
+gap: 25px;
+}
+
+.footer-inner {
+padding: 50px 25px;
+}
+
+.footer-section h2 {
+font-size: 20px;
+}
+
+.footer-section p,
+.footer-section ul li {
+font-size: 14px;
+}
+
+.social-icons {
+justify-content: flex-start;
+}
+
+.icon {
+width: 36px;
+height: 36px;
+font-size: 14px;
+}
+
+.footer-ribbon span {
+font-size: 14px;
+}
+
+.footer-ribbon .ribbon-link {
+font-size: 14px;
+}
+
+.footer-bottom {
+font-size: 13px;
+padding: 0 25px;
+}
+}
+
+@media (max-width: 480px) {
+.footer-inner {
+padding: 40px 15px;
+}
+
+.footer-section h2 {
+font-size: 18px;
+}
+
+.footer-section p,
+.footer-section ul li {
+font-size: 13px;
+}
+
+.footer-ribbon span,
+.footer-ribbon .ribbon-link {
+font-size: 12px;
+}
+
+.footer-bottom {
+font-size: 12px;
+padding: 0 15px;
+}
+
+.whatsapp-btn {
+width: 50px;
+height: 50px;
+font-size: 18px;
+bottom: 16px;
+right: 16px;
+}
+}

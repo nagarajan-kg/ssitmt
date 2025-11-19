@@ -1,0 +1,164 @@
+.inv-section {
+  /* width: 100%; */
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #ff8a00, #ff6b00);
+}
+
+.inv-container {
+  max-width: 1150px;
+  margin: auto;
+  text-align: center;
+}
+
+.inv-title {
+  font-size: 34px;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.inv-subtitle {
+  color: #ffeedd;
+  margin-bottom: 40px;
+  font-size: 21px;
+}
+
+.inv-card-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.inv-card {
+  width: 320px;
+  background: #ffffff;
+  padding: 35px 25px;
+  border-radius: 14px;
+  text-align: center;
+  transition: 0.35s ease;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.inv-card:hover {
+  transform: translateY(-10px);
+  background-color: #0b68ff;
+  color: white !important;
+  box-shadow: 0 10px 30px rgba(0, 102, 255, 0.25);
+}
+
+.inv-icon {
+  font-size: 48px;
+  color: #0b68ff;
+  margin-bottom: 18px;
+  transition: 0.35s ease;
+  display: inline-block;
+  transform: translateX(10px);
+}
+
+.inv-card:hover .inv-icon {
+  transform: translateX(-5px) rotate(-10deg) scale(1.15);
+  color: #ffffff;
+}
+
+.inv-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1d1d1d;
+  margin-bottom: 10px;
+}
+
+.inv-card-title:hover {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.inv-card-text {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.inv-card:hover .inv-card-title,
+.inv-card:hover .inv-card-text {
+  color: #ffffff !important;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .inv-card {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .inv-title {
+    font-size: 28px;
+  }
+
+  .inv-card-wrapper {
+    gap: 15px;
+  }
+
+  .inv-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+
+/* MOBILE RESPONSIVE FOR INNOVATION SECTION */
+@media (max-width: 992px) {
+.inv-card-wrapper {
+flex-direction: column;
+gap: 25px;
+align-items: center;
+}
+
+.inv-card {
+width: 90%;
+max-width: 350px;
+padding: 30px 20px;
+}
+
+.inv-title {
+font-size: 30px;
+}
+
+.inv-subtitle {
+font-size: 18px;
+}
+}
+
+@media (max-width: 576px) {
+.inv-card-wrapper {
+gap: 20px;
+}
+
+.inv-card {
+width: 95%;
+padding: 25px 15px;
+}
+
+.inv-title {
+font-size: 26px;
+}
+
+.inv-subtitle {
+font-size: 16px;
+}
+
+.inv-icon {
+font-size: 40px;
+}
+
+.inv-card-title {
+font-size: 18px;
+}
+
+.inv-card-text {
+font-size: 14px;
+}
+}

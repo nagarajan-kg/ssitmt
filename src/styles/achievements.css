@@ -1,0 +1,145 @@
+.achievements-section {
+  position: relative;
+  padding: 80px 65px;
+  overflow: hidden;
+}
+
+/* BACKGROUND PARALLAX STEEL IMAGE */
+.achievements-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/images/sec-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* opacity: 0.12; */
+  z-index: 0;
+}
+
+.achievements-content {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.left,
+.right {
+  flex: 1;
+}
+
+.tag {
+  color: #ff7a00;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-family: var(--secondary-font);
+}
+
+.title {
+  color: #1e4aa5;
+  /* font-size: 34px; */
+  /* margin-bottom: 20px; */
+  /* line-height: 1.2; */
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.team-image {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-out;
+}
+
+.desc {
+  color: #97999c;
+  font-size: 22px;
+  font-weight: 450;
+  line-height: 1.8;
+}
+
+/* ICON GRID */
+.icons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+  opacity: 1;
+  transform: translateY(60px); /* Start from bottom */
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+/* SCROLL-UP ANIMATION */
+.icons-grid.icons-animate {
+  /* transform: translateY(0);  */
+  opacity: 1;
+}
+
+.icon-box img {
+    filter: grayscale(0);
+    opacity: 1;
+    transform: translateY(-8px);
+}
+
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box img {
+  width: 70px;
+  filter: grayscale(1);
+  opacity: 0.85;
+  transition: 0.3s;
+}
+
+.icon-box img {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: translateY(-8px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .achievements-content {
+    flex-direction: column;
+  }
+  .title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 550px) {
+  .icons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .title {
+    font-size: 22px;
+  }
+}
+
+
+/* SECOND ROW SCROLL ANIMATION */
+.row2 {
+  transform: translateY(40px);
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
+}
+
+.icons-grid.icons-animate .row2 {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.achievements-content {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 20px;
+}

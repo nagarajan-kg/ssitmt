@@ -1,0 +1,36 @@
+.about-section {
+  padding: 20px;
+  height: 370px;
+}
+
+.about-text {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--text-color, #333);
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 2;
+  white-space: pre-wrap;
+  margin-top: 126px;
+  width: 75%;
+}
+.highlight {
+  color: #2f55a6;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .about-text {
+    font-size: 1.4rem;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+}
