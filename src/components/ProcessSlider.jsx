@@ -6,6 +6,7 @@ import slider_img2 from "../assets/images/slider_img2.jpg";
 import slider_img3 from "../assets/images/slider_img3.jpg";
 import slider_img4 from "../assets/images/slider_img4.jpg";
 import slider_img5 from "../assets/images/slider_img5.jpg";
+import slider_bg from "../assets/images/slider_bg.jpg";
 
 const slides = [
   {
@@ -41,20 +42,13 @@ export default function ProcessSlider() {
 
   // Auto slide
   useEffect(() => {
-    const auto = setInterval(() => {
-      next();
-    }, 4500);
-
+    const auto = setInterval(() => next(), 4500);
     return () => clearInterval(auto);
   }, []);
 
-  const next = () => {
-    setCurrent((prev) => (prev + 1) % slides.length);
-  };
-
-  const prev = () => {
+  const next = () => setCurrent((prev) => (prev + 1) % slides.length);
+  const prev = () =>
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
-  };
 
   // Mouse + Touch drag
   const handleStart = (e) => {
@@ -63,23 +57,20 @@ export default function ProcessSlider() {
 
   const handleEnd = (e) => {
     if (startX.current === null) return;
-
     const endX = e.clientX || e.changedTouches[0].clientX;
     const diff = startX.current - endX;
-
-    if (diff > 50) next(); // swipe left → next
-    if (diff < -50) prev(); // swipe right → prev
-
+    if (diff > 50) next();
+    if (diff < -50) prev();
     startX.current = null;
   };
 
   return (
-    <section className="process-section">
+    <section
+      className="process-section"
+      style={{ backgroundImage: `url(${slider_bg})` }}
+    >
       <div className="overlay"></div>
 
-      {/* TOP TITLE */}
-
-      {/* SLIDER BOX */}
       <div
         className="slider-area"
         onMouseDown={handleStart}
@@ -92,7 +83,6 @@ export default function ProcessSlider() {
             <p className="small-title">OUR PROCESS</p>
             <h2 className="big-title">From Fuel to Fire</h2>
           </div>
-
           <img src={slides[current].img} alt="slide" className="slide-img" />
         </div>
 
