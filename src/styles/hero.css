@@ -52,7 +52,7 @@
   font-weight: 600;
   line-height: 1.05;
   margin: 0 0 18px;
-  text-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
 }
 
 .hero-btn {
@@ -71,7 +71,7 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 6;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0, 0, 0, 0.35);
   color: #fff;
   border: none;
   width: 48px;
@@ -85,10 +85,16 @@
   justify-content: center;
 }
 
-.hero-arrow.left { left: 18px; }
-.hero-arrow.right { right: 18px; }
+.hero-arrow.left {
+  left: 18px;
+}
+.hero-arrow.right {
+  right: 18px;
+}
 
-.hero-arrow:hover { background: rgba(0,0,0,0.55); }
+.hero-arrow:hover {
+  background: rgba(0, 0, 0, 0.55);
+}
 
 /* Dots bottom center */
 .hero-dots {
@@ -105,10 +111,10 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.45);
+  background: rgba(255, 255, 255, 0.45);
   border: none;
   cursor: pointer;
-  transition: transform .18s ease, background .18s ease;
+  transition: transform 0.18s ease, background 0.18s ease;
 }
 
 .dot.active {
@@ -116,14 +122,33 @@
   transform: scale(1.12);
 }
 
-
 @media (max-width: 992px) {
-  .hero-text { left: 36px; bottom: 90px; }
-  .hero-text h1 { font-size: 2.4rem; }
+  .hero-text {
+    left: 36px;
+    bottom: 90px;
+  }
+  .hero-text h1 {
+    font-size: 2.4rem;
+  }
+  .hero-section {
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 576px) {
-  .hero-text { left: 18px; bottom: 60px; max-width: 80%; }
-  .hero-text h1 { font-size: 1.5rem; }
-  .hero-arrow { width: 40px; height: 40px; font-size: 22px; }
+  .hero-text {
+    left: 18px;
+    bottom: 60px;
+    max-width: 80%;
+  }
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+  .hero-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
 }
